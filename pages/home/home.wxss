@@ -32,10 +32,9 @@
   position: relative;
 }
 .sign .totle {
-  position: absolute;
-  width: 8rem;
-  top: 5rem;
-  left: 16rem;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 .cont {
   border: 1rpx solid black;

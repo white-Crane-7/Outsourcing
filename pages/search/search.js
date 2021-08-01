@@ -27,34 +27,27 @@ Page({
         isFocus:true
       })
       //准备发送请求
-      // clearIimeout(this.timeId);
-      // this.timeId = setTimeout(() =>{
+       clearTimeout(this.timeId);
+       this.timeId = setTimeout(() =>{
          this.qsearch(value);
-      // },1000)
+       },500)
       
   },
   async qsearch(query){
     const res = await request({url:'/article/search',data:{key:query}});
     console.log(res);
     let {result} = res.data
-    if(result = []){
+     this.setData({
+      result
+     })
+     if(result.length == 0){
       wx.showToast({
         title: '未找到该文章',
         icon: 'error',
         duration: 1500,
         mask: false,
       });
-        
     }
-    // if(res.data.result = []){
-    //   const none = [{name:'没有该数据'}]
-    //   this.setData({
-    //     goods:none
-    //   })
-    // }
-     this.setData({
-      result
-     })
   },
   handleCancel(){
     this.setData({

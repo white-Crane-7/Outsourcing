@@ -17,18 +17,6 @@
                     <i class="iconfont icon-dayuhao pos"></i>
                 </navigator>
             </view>
-            <!-- <view class="cont">
-                 <navigator url="/pages/analysis/analysis" class="item">
-                    维修案例分析
-                    <i class="iconfont icon-dayuhao pos"></i>
-                </navigator>
-            </view>
-            <view class="cont">
-                 <navigator url="/pages/downword/downword" class="item">
-                    维修软件更新
-                    <i class="iconfont icon-dayuhao pos"></i>
-                </navigator>
-            </view> -->
         </view>
     </block>
 </tabs>

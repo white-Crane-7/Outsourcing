@@ -12,11 +12,11 @@ Page({
     tabs:[
       {
         id:0,
-        name:"驾驶员日常维修",
+        name:"驾驶员日常维护",
         isActive:true,
       },{
         id:1,
-        name:"维修工日常维护",
+        name:"修理工日常维修",
         isActive:false,
       }
     ],
@@ -47,7 +47,7 @@ Page({
   //总浏览数
   async pagetotle(){
     const res = await request({url:'/article/total/visit'});
-    console.log(res)
+
     const {result} = res.data
     this.setData({
       result
@@ -78,7 +78,7 @@ Page({
   async listdrive(curr){
     try {
       const res = await request({url:'/article/list',method:"GET",data:{page:curr,type:0}});
-      console.log(res)
+
       let {list} = res.data.result
       let {currPage} =res.data.result
       let {totalPage} =res.data.result
@@ -101,13 +101,13 @@ Page({
   //获取openid
   async putCode(code){
     const res = await request({url:'/article/user/like',data:{likedPoseId:code}});
+    console.log(res)
     const {openId} = res.data.result
     //建立openid
     wx.setStorage({
       key:'openId',
       data:openId
     })
-    const e = wx.getStorageSync('openId')
   },
   //获取点击的页面列表
   handlechangecurr(e){

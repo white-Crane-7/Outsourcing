@@ -14,7 +14,7 @@ export const request=(params)=>{
      mask: true,
    });
   //定义公共的url
-  const  baseUrl="http://47.96.86.132:8080/csom"
+  const  baseUrl="https://www.muxiushangmen.ltd/csom"
   return new Promise((resolve,reject)=>{
     wx.request({
       ...params,//对传进来的值进行解构
